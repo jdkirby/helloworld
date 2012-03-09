@@ -5,17 +5,54 @@
 package Containers;
 
 /**
- *
- * @author Wes
+ * @author Julie Kirby
+ * @author Wes Forsythe
+ * 
+ * This class extends Container by maintaining attributes for portable containers.
  */
+ 
 public class Portable {
-    private boolean dropable = false;
-    private boolean InTransit = true;
+    private boolean droppable = false;
+    private boolean inTransit = true;
+    protected int maxItems;
     
-    void getAttribute(){
-        
+    public boolean getDroppable()
+    {
+        /**
+         * returns whether container is droppable or not
+         */
+        return droppable;
     }
-    void setAttribute(){
-        
+    
+    private void setDroppable(boolean value)
+    {
+        /**
+         * sets value for droppability of container
+         */
+         droppable = value;
+    }
+    
+    public boolean getTransitState()
+    {
+        /**
+         * returns whether or not object is in transit (on Player/Creature)
+         */
+         return inTransit;
+    }
+    
+    private void setTransitState(boolean value)
+    {
+        /**
+         * sets current transit state of container
+         */
+         inTransit = value;
+    }
+    
+    public int getMaxItems()
+    {
+        /**
+         * return max allowable inventory items of container
+         */
+         return maxItems;
     }
 };
